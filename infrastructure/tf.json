@@ -1,0 +1,328 @@
+{
+  "kubeone_api": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "endpoint": "string"
+      }
+    ],
+    "value": {
+      "endpoint": "udagram-api-lb-107825066.us-east-1.elb.amazonaws.com"
+    }
+  },
+  "kubeone_hosts": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "control_plane": [
+          "object",
+          {
+            "bastion": "string",
+            "bastion_port": "number",
+            "bastion_user": "string",
+            "cloud_provider": "string",
+            "cluster_name": "string",
+            "hostnames": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "private_address": [
+              "tuple",
+              [
+                "string",
+                "string",
+                "string"
+              ]
+            ],
+            "ssh_agent_socket": "string",
+            "ssh_port": "number",
+            "ssh_private_key_file": "string",
+            "ssh_user": "string"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "control_plane": {
+        "bastion": "3.87.36.147",
+        "bastion_port": 22,
+        "bastion_user": "ubuntu",
+        "cloud_provider": "aws",
+        "cluster_name": "udagram",
+        "hostnames": [
+          "ip-172-31-28-246.ec2.internal",
+          "ip-172-31-29-158.ec2.internal",
+          "ip-172-31-30-218.ec2.internal"
+        ],
+        "private_address": [
+          "172.31.28.246",
+          "172.31.29.158",
+          "172.31.30.218"
+        ],
+        "ssh_agent_socket": "env:SSH_AUTH_SOCK",
+        "ssh_port": 22,
+        "ssh_private_key_file": "",
+        "ssh_user": "ubuntu"
+      }
+    }
+  },
+  "kubeone_workers": {
+    "sensitive": false,
+    "type": [
+      "object",
+      {
+        "udagram-us-east-1a": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "udagram-us-east-1b": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ],
+        "udagram-us-east-1c": [
+          "object",
+          {
+            "providerSpec": [
+              "object",
+              {
+                "cloudProviderSpec": [
+                  "object",
+                  {
+                    "ami": "string",
+                    "availabilityZone": "string",
+                    "diskIops": "number",
+                    "diskSize": "number",
+                    "diskType": "string",
+                    "instanceProfile": "string",
+                    "instanceType": "string",
+                    "region": "string",
+                    "securityGroupIDs": [
+                      "tuple",
+                      [
+                        "string"
+                      ]
+                    ],
+                    "subnetId": "string",
+                    "tags": [
+                      "object",
+                      {
+                        "udagram-workers": "string"
+                      }
+                    ],
+                    "vpcId": "string"
+                  }
+                ],
+                "operatingSystem": "string",
+                "operatingSystemSpec": [
+                  "object",
+                  {
+                    "distUpgradeOnBoot": "bool"
+                  }
+                ],
+                "sshPublicKeys": [
+                  "tuple",
+                  [
+                    "string"
+                  ]
+                ]
+              }
+            ],
+            "replicas": "number"
+          }
+        ]
+      }
+    ],
+    "value": {
+      "udagram-us-east-1a": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a208c7cdba991ea",
+            "availabilityZone": "us-east-1a",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "udagram-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-1",
+            "securityGroupIDs": [
+              "sg-004e4c48a3ba12c74"
+            ],
+            "subnetId": "subnet-08c8832c9b7c54807",
+            "tags": {
+              "udagram-workers": ""
+            },
+            "vpcId": "vpc-9c6917e6"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxTKPdLuLD1tMpKKipa9+F/sGGVWHezUZFrsg2GBwSvue++fkDOhmLNme3crm/IEZyYYempetq45G+fbmAZpweSq5QyTp1h9MIduSdMNNHA9Aeq8vimnGIAm/CVg3qH8sMUmthtvPJFRLSX3zBlev5+udYNcvcjhIraatFvKxd6kbY/kGedKm/ZXBWGpKXTt3QsMsW4HsJh2Yvv02IxSEHkaxBJ6lmsp1PTBooOC1BpLwJ3LE4274qDv/seNT/8FUXHcqT1oa4kwwFD4E0t8khHERwCDsH9ZXipDni8NQxdYUDYkGmFfKJYFF/ZCs4GGDeAZgOcV3lt/BpiUTMVu3j kafuuma@kafuuma"
+          ]
+        },
+        "replicas": 1
+      },
+      "udagram-us-east-1b": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a208c7cdba991ea",
+            "availabilityZone": "us-east-1b",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "udagram-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-1",
+            "securityGroupIDs": [
+              "sg-004e4c48a3ba12c74"
+            ],
+            "subnetId": "subnet-0c6770375a9aa55b0",
+            "tags": {
+              "udagram-workers": ""
+            },
+            "vpcId": "vpc-9c6917e6"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxTKPdLuLD1tMpKKipa9+F/sGGVWHezUZFrsg2GBwSvue++fkDOhmLNme3crm/IEZyYYempetq45G+fbmAZpweSq5QyTp1h9MIduSdMNNHA9Aeq8vimnGIAm/CVg3qH8sMUmthtvPJFRLSX3zBlev5+udYNcvcjhIraatFvKxd6kbY/kGedKm/ZXBWGpKXTt3QsMsW4HsJh2Yvv02IxSEHkaxBJ6lmsp1PTBooOC1BpLwJ3LE4274qDv/seNT/8FUXHcqT1oa4kwwFD4E0t8khHERwCDsH9ZXipDni8NQxdYUDYkGmFfKJYFF/ZCs4GGDeAZgOcV3lt/BpiUTMVu3j kafuuma@kafuuma"
+          ]
+        },
+        "replicas": 1
+      },
+      "udagram-us-east-1c": {
+        "providerSpec": {
+          "cloudProviderSpec": {
+            "ami": "ami-00a208c7cdba991ea",
+            "availabilityZone": "us-east-1c",
+            "diskIops": 500,
+            "diskSize": 50,
+            "diskType": "gp2",
+            "instanceProfile": "udagram-host",
+            "instanceType": "t3.medium",
+            "region": "us-east-1",
+            "securityGroupIDs": [
+              "sg-004e4c48a3ba12c74"
+            ],
+            "subnetId": "subnet-0c16fd15bbda7d745",
+            "tags": {
+              "udagram-workers": ""
+            },
+            "vpcId": "vpc-9c6917e6"
+          },
+          "operatingSystem": "ubuntu",
+          "operatingSystemSpec": {
+            "distUpgradeOnBoot": false
+          },
+          "sshPublicKeys": [
+            "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCxTKPdLuLD1tMpKKipa9+F/sGGVWHezUZFrsg2GBwSvue++fkDOhmLNme3crm/IEZyYYempetq45G+fbmAZpweSq5QyTp1h9MIduSdMNNHA9Aeq8vimnGIAm/CVg3qH8sMUmthtvPJFRLSX3zBlev5+udYNcvcjhIraatFvKxd6kbY/kGedKm/ZXBWGpKXTt3QsMsW4HsJh2Yvv02IxSEHkaxBJ6lmsp1PTBooOC1BpLwJ3LE4274qDv/seNT/8FUXHcqT1oa4kwwFD4E0t8khHERwCDsH9ZXipDni8NQxdYUDYkGmFfKJYFF/ZCs4GGDeAZgOcV3lt/BpiUTMVu3j kafuuma@kafuuma"
+          ]
+        },
+        "replicas": 1
+      }
+    }
+  }
+}
