@@ -6,13 +6,13 @@ services:
     image: kafuuma/reverseproxy
   backend_user:
     build:
-      context: ../../udacity-c3-restapi-user
+      context: ../../api-user
     image: kafuuma/udacity-restapi-user
   backend_feed:
     build:
-      context: ../../udacity-c3-restapi-feed
+      context: ../../api-feed
     image: kafuuma/udacity-restapi-feed
   frontend:
     build:
-      context: ../../udacity-c3-frontend
+      context: ../../frontend
     image: kafuuma/udacity-frontend:local
